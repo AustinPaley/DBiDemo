@@ -1,3 +1,1 @@
-# DBProductSelector
-# DBiDemo
 # DBiDemo
