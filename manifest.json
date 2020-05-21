@@ -1,15 +1,22 @@
 {
-  "name" : "DB Product Selector",
-  "description" : "Extension to easily turn on and off DB products.",
+  "name" : "DB iDemo",
+  "description" : "Extension to easily build demo audiences in Demandbase.",
   "version" : "0.1",
-  "options_page": "options.html",
   "manifest_version" : 2,
   "permissions" : ["activeTab", "declarativeContent", "storage"],
+  "content_scripts": [
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
   "background" : {
     "scripts" : ["background.js"],
     "persistent" : false
   },
-  "page_action" : {
+  "browser_action" : {
     "default_popup" : "popup.html",
     "default_icon" : {
       "16" : "calculator-16.png",

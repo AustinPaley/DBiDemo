@@ -1,14 +1,22 @@
-let changeColor = document.getElementById('changeColor');
+const formLog = document.getElementById('change_form')
+let audienceNameChange = document.querySelector('#audience_name_change')
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-  changeColor.onclick = function(element) {
-    let color = element.target.value;
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.executeScript(
-          tabs[0].id,
-          {code: 'document.body.style.backgroundColor = "' + color + '";'});
-    });
-  };
-});
+formLog.addEventListener('submit', (e) => {
+  // THE FORM HTMLCOLLECTION NEEDS TO BE CONVERTED INTO A STRING TO PASS THROUGH THE SENDMESSAGE FUNCTION
+  e.preventDefault()
+  var jsonString = ""
+  for (var i=0; i<e.target.elements.length; i++){
+    if (e.target.elements[i].value !== ""){
+      jsonString += "//" + e.target.elements[i].value
+    }
+  }
+
+  const params = {
+    active: true,
+    currentWindow: true
+  }
+  debugger
+  chrome.tabs.query(params, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, jsonString)
+  })
+})
