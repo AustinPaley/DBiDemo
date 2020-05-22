@@ -16,6 +16,7 @@ formLog.addEventListener('submit', (e) => {
     active: true,
     currentWindow: true
   }
+  debugger
   chrome.tabs.query(params, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, jsonString)
   })
@@ -23,6 +24,14 @@ formLog.addEventListener('submit', (e) => {
 
 audienceLog.addEventListener('submit', (e) => {
   e.preventDefault()
+  var jsonString = ""
+  for (var i=0; i<e.target.elements.length; i++){
+    if (e.target.elements[i].value !== ""){
+      jsonString += "||" + e.target.elements[i].value
+    }
+  }
+
+  debugger
 
   const params = {
     active: true,
@@ -30,6 +39,6 @@ audienceLog.addEventListener('submit', (e) => {
   }
 
   chrome.tabs.query(params, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, "STRING")
+    chrome.tabs.sendMessage(tabs[0].id, jsonString)
   })
 })

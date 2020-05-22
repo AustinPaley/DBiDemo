@@ -4,68 +4,69 @@
 // IT WORKS FINE - MIGHT BE WORTH A REFACTOR
 
 chrome.runtime.onMessage.addListener((formData) => {
+  let valueArray = formData.split("||")
   console.log("HOLY SHIT WE MADE IT")
+  if (formData.includes("||") === true){
+    //FIRST AUDIENCE
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[1]
 
-  //FIRST AUDIENCE
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = valueArray[2]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[3]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[4]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[5]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = ""
+    // SECOND AUDIENCE
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[6]
 
-  // SECOND AUDIENCE
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = valueArray[7]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[8]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[9]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[10]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = ""
+    // THIRD AUDIENCE
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[11]
 
-  // THIRD AUDIENCE
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = valueArray[12]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[13]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[14]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[15]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = ""
+    // FOURTH AUDIENCE
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[16]
 
-  // FOURTH AUDIENCE
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = valueArray[17]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[18]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[19]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[20]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = ""
+    // FIFTH AUDIENCE
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[21]
 
-  // FIFTH AUDIENCE
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = valueArray[22]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(1) > div > div").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[23]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[24]
 
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
-
-  document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = ""
-
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[25]
+  }
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
   // this splits out values out of string format back into array format for easier usage
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
 
   // FIRST AUDIENCE NAME CHANGE
@@ -74,7 +75,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
 
     // FIRST AUDIENCE NUMBER OF ACCOUNTS
@@ -83,7 +84,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[3])) / (parseInt(valueArray[2])) * 100
 
@@ -96,7 +97,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[4])) / (parseInt(valueArray[2])) * 100
 
@@ -109,7 +110,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
 
     //FIRST AUDIENCE TOTAL PAGEVIEWS
@@ -118,7 +119,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     // OPPORTUNITY BAR CHANGES
     let valueArray = formData.split("//")
     document.querySelector('.frontend-js-components-reporting-view-View__mainContainer--3KOXd > div > div').style = ""
@@ -132,7 +133,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
 
     // ALL ACCOUNTS NUMBERS
@@ -141,7 +142,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[3])) / (parseInt(valueArray[2])) * 100
     // VISITED WEBSITE
@@ -159,7 +160,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[4])) / (parseInt(valueArray[2])) * 100
     // ENGAGED ON WEBSITE
@@ -178,7 +179,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[6])) / (parseInt(valueArray[2])) * 100
     // CONVERTED ON WEBSITE
@@ -197,7 +198,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[7])) / (parseInt(valueArray[2])) * 100
     // OPPORTUNITY
@@ -215,7 +216,7 @@ chrome.runtime.onMessage.addListener((formData) => {
 })
 
 chrome.runtime.onMessage.addListener((formData) => {
-  if (formData !== "STRING"){
+  if (formData.includes("//") === true){
     let valueArray = formData.split("//")
     let barPercentage =  (parseInt(valueArray[8])) / (parseInt(valueArray[2])) * 100
     // WON
