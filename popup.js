@@ -1,4 +1,5 @@
-const formLog = document.getElementById('change_form')
+const formLog = document.getElementById('abm_analytics')
+const audienceLog = document.getElementById('audiences_form')
 let audienceNameChange = document.querySelector('#audience_name_change')
 
 formLog.addEventListener('submit', (e) => {
@@ -15,8 +16,20 @@ formLog.addEventListener('submit', (e) => {
     active: true,
     currentWindow: true
   }
-  debugger
   chrome.tabs.query(params, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, jsonString)
+  })
+})
+
+audienceLog.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const params = {
+    active: true,
+    currentWindow: true
+  }
+
+  chrome.tabs.query(params, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, "STRING")
   })
 })
