@@ -17,7 +17,10 @@
         color: #FF8061
       }
       h2{
+        font-size: 1.4em;
         margin-left: 10px;
+        margin-block-start: 0.5em;
+        margin-block-end: 0.5em;
       }
       #table-info{
         margin-top: 10px;
@@ -46,12 +49,12 @@
       #Submit{
         width: 100px;
         margin-left: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
       }
       #Submit1{
         width: 100px;
         margin-left: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
       }
     </style>
   </head>
@@ -59,14 +62,14 @@
     <div class="navBar">
       <h3 style="background: url('https://www.demandbase.com/wp-content/uploads/logo.png') no-repeat; height: 35px; margin-left: 15px;"></h3>
     </div>
-    <br/><br/><br/><br/><br/><br/>
-    <h2>Top Level Audience Customization</h2>
+    <br/><br/><br/><br/>
     <label for="prebuilt">Choose a Demo Type:</label>
     <select name="prebuilt" id="prebuilt">
       <option selected disabled>Choose an option below:</option>
       <option value="Midmarket Audiences">Midmarket Audiences</option>
       <option value="Enterprise Audiences">Enterprise Audiences</option>
     </select>
+    <h2>Top Level Audience Customization</h2>
     <form id="audiences_form">
       <table>
         <tr>
@@ -194,44 +197,45 @@
     </form>
     <h2>Audience & ABM Analytics Customization (First Audience Only)</h2>
     <form id="abm_analytics">
-      <label>Audience Name Change</label>
-      <input id="audience_name_change">
-      <br />
-      <label>Audience Number of Accounts</label>
-      <input id="main_audience_accounts">
-      <br />
-      <label>Audience Visited Website</label>
-      <input id="main_audience_visited">
-      <br />
-      <label>Audience Engaged on Website</label>
-      <input id="main_audience_engaged">
-      <br />
-      <label>Audience Total Pageviews</label>
-      <input id="main_audience_pageviews">
-      <br />
-      <label>Converted on Website</label>
-      <input id="main_audience_converted">
-      <br />
-      <label>Opportunities</label>
-      <input id="main_audience_opportunities">
-      <br />
-      <label>Accounts Won</label>
-      <input id="main_audience_accountswon">
-      <br />
-      <label>Total Won (USD)</label>
-      <input id="main_audience_totalwon">
-      </br>
-      <label>Opportunity Close Rate</label>
-      <input id="main_audience_closerate">
-      </br>
-      <label>Total Pipeline</label>
-      <input id="main_audience_pipeline">
-      </br>
-      <label>Average Deal Size</label>
-      <input id="main_audience_dealsize">
-      </br>
+      <table>
+        <tr>
+          <td>Audience Name Change</td>
+          <td><input id="audience_name_change"></td>
+          <td>Audience Number of Accounts</td>
+          <td><input id="main_audience_accounts"></td>
+        </tr>
+        <tr>
+          <td>Audience Visited Website</td>
+          <td><input id="main_audience_visited"></td>
+          <td>Audience Engaged on Website</td>
+          <td><input id="main_audience_engaged"></td>
+        </tr>
+        <tr>
+          <td>Audience Total Pageviews</td>
+          <td><input id="main_audience_pageviews"></td>
+          <td>Converted on Website</td>
+          <td><input id="main_audience_converted"></td>
+        </tr>
+        <tr>
+          <td>Opportunities</td>
+          <td><input id="main_audience_opportunities"></td>
+          <td>Accounts Won</td>
+          <td><input id="main_audience_accountswon"></td>
+        </tr>
+        <tr>
+          <td>Total Won (USD)</td>
+          <td><input id="main_audience_totalwon"></td>
+          <td>Opportunity Close Rate</td>
+          <td><input id="main_audience_closerate"></td>
+        </tr>
+        <tr>
+          <td>Total Pipeline</td>
+          <td><input id="main_audience_pipeline"></td>
+          <td>Average Deal Size</td>
+          <td><input id="main_audience_dealsize"></td>
+        </tr>
+      </table>
       <button id="Submit">Submit</button>
-      <br/>
     </form>
   </body>
   <script src="popup.js"></script>
