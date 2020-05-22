@@ -7,6 +7,16 @@ chrome.runtime.onMessage.addListener((formData) => {
   let valueArray = formData.split("||")
   console.log("HOLY SHIT WE MADE IT")
   if (formData.includes("||") === true){
+    let audienceOne1 =  (parseInt(valueArray[3])) / (parseInt(valueArray[2])) * 100
+    let audienceOne2 =  (parseInt(valueArray[4])) / (parseInt(valueArray[2])) * 100
+    let audienceTwo1 =  (parseInt(valueArray[8])) / (parseInt(valueArray[7])) * 100
+    let audienceTwo2 =  (parseInt(valueArray[9])) / (parseInt(valueArray[7])) * 100
+    let audienceThree1 =  (parseInt(valueArray[13])) / (parseInt(valueArray[12])) * 100
+    let audienceThree2 =  (parseInt(valueArray[14])) / (parseInt(valueArray[12])) * 100
+    let audienceFour1 =  (parseInt(valueArray[18])) / (parseInt(valueArray[17])) * 100
+    let audienceFour2 =  (parseInt(valueArray[19])) / (parseInt(valueArray[17])) * 100
+    let audienceFive1 =  (parseInt(valueArray[23])) / (parseInt(valueArray[22])) * 100
+    let audienceFive2 =  (parseInt(valueArray[24])) / (parseInt(valueArray[22])) * 100
     //FIRST AUDIENCE
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[1]
 
@@ -17,6 +27,10 @@ chrome.runtime.onMessage.addListener((formData) => {
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[4]
 
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[5]
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceOne1 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceOne2 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
 
     // SECOND AUDIENCE
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[6]
@@ -29,6 +43,10 @@ chrome.runtime.onMessage.addListener((formData) => {
 
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[10]
 
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceTwo1 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceTwo2 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
     // THIRD AUDIENCE
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[11]
 
@@ -39,6 +57,10 @@ chrome.runtime.onMessage.addListener((formData) => {
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[14]
 
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[15]
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceThree1 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceThree2 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
 
     // FOURTH AUDIENCE
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[16]
@@ -51,6 +73,10 @@ chrome.runtime.onMessage.addListener((formData) => {
 
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div").innerHTML = valueArray[20]
 
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceFour1 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceFour2 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
     // FIFTH AUDIENCE
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__header--Dw_Uk > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__header__title--3G7mP > span > a").innerHTML = valueArray[21]
 
@@ -61,6 +87,10 @@ chrome.runtime.onMessage.addListener((formData) => {
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[24]
 
     document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(4) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__number--1j-Il").innerHTML = valueArray[25]
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceFive1 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
+
+    document.querySelector("#app > div:nth-child(2) > div > div.frontend-js-components-audiences-audiences-App__appMainContainer__conent--8g7Ev > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div > div > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__container__rightSideWrapper--2aRmc > div > div:nth-child(3) > div > div.frontend-js-components-audiences-audiences-table-TableRow-TableRow__cell__chart--103AG > div > div").style="width: " + audienceFive2 + "%; height: 5px; background-color: rgb(255, 138, 0); border-radius: 0px;"
   }
 })
 
