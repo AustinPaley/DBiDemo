@@ -61,6 +61,12 @@
     </div>
     <br/><br/><br/><br/><br/><br/>
     <h2>Top Level Audience Customization</h2>
+    <label for="prebuilt">Choose a Demo Type:</label>
+    <select name="prebuilt" id="prebuilt">
+      <option selected disabled>Choose an option below:</option>
+      <option value="Midmarket Audiences">Midmarket Audiences</option>
+      <option value="Enterprise Audiences">Enterprise Audiences</option>
+    </select>
     <form id="audiences_form">
       <table>
         <tr>
@@ -88,19 +94,19 @@
             Audience #1
           </td>
           <td>
-            <input>
+            <input id="audience_one_name">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_one_accounts">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_one_visited">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_one_engaged">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_one_total">
           </td>
         </tr>
         <tr>
@@ -108,19 +114,19 @@
             Audience #2
           </td>
           <td>
-            <input>
+            <input id="audience_two_name">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_two_accounts">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_two_visited">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_two_engaged">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_two_total">
           </td>
         </tr>
         <tr>
@@ -128,19 +134,19 @@
             Audience #3
           </td>
           <td>
-            <input>
+            <input id="audience_three_name">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_three_accounts">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_three_visited">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_three_engaged">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_three_total">
           </td>
         </tr>
         <tr>
@@ -148,19 +154,19 @@
             Audience #4
           </td>
           <td>
-            <input>
+            <input id="audience_four_name">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_four_accounts">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_four_visited">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_four_engaged">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_four_total">
           </td>
         </tr>
         <tr>
@@ -168,19 +174,19 @@
             Audience #5
           </td>
           <td>
-            <input>
+            <input id="audience_five_name">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_five_accounts">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_five_visited">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_five_engaged">
           </td>
           <td>
-            <input class="number_input">
+            <input class="number_input" id="audience_five_total">
           </td>
         </tr>
       </table>
@@ -192,37 +198,37 @@
       <input id="audience_name_change">
       <br />
       <label>Audience Number of Accounts</label>
-      <input>
+      <input id="main_audience_accounts">
       <br />
       <label>Audience Visited Website</label>
-      <input>
+      <input id="main_audience_visited">
       <br />
       <label>Audience Engaged on Website</label>
-      <input>
+      <input id="main_audience_engaged">
       <br />
       <label>Audience Total Pageviews</label>
-      <input>
+      <input id="main_audience_pageviews">
       <br />
       <label>Converted on Website</label>
-      <input>
+      <input id="main_audience_converted">
       <br />
       <label>Opportunities</label>
-      <input>
+      <input id="main_audience_opportunities">
       <br />
       <label>Accounts Won</label>
-      <input>
+      <input id="main_audience_accountswon">
       <br />
       <label>Total Won (USD)</label>
-      <input>
+      <input id="main_audience_totalwon">
       </br>
       <label>Opportunity Close Rate</label>
-      <input>
+      <input id="main_audience_closerate">
       </br>
       <label>Total Pipeline</label>
-      <input>
+      <input id="main_audience_pipeline">
       </br>
       <label>Average Deal Size</label>
-      <input>
+      <input id="main_audience_dealsize">
       </br>
       <button id="Submit">Submit</button>
       <br/>
